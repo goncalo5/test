@@ -9,3 +9,4 @@ f_test() {
 
 echo 1
 f_test 3
+./test.py

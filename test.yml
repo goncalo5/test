@@ -1,0 +1,10 @@
+animais:
+  tigre:
+    cores:
+      - laranja
+      - branco
+    tamanho:
+      grande
+  leao:
+    tamanho:
+      grande
