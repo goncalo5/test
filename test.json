@@ -1,4 +1,20 @@
-{"animais": {
-  "leao": {},
-  "tigre": {}}
+{
+    "name_": "AD1018.4",
+    "periodic_inform_interval": 3600,
+    "send_to": [
+        "statistics_gpvs"
+    ],
+    "collection_method": "gpv",
+    "parameters": [
+        {
+            "name_": "MO",
+            /* "tr_value_long": "DeviceInfo.ManufacturerOUI", */
+            "action": []
+        },
+        {
+            "name_": "PC",
+            "tr_value_long": "DeviceInfo.ProductClass",
+            "action": []
+        },
+    ]
 }

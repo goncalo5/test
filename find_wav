@@ -1,0 +1,507 @@
+/usr/local/Homebrew/Library/Homebrew/test/support/fixtures/test.wav
+/usr/local/lib/python2.7/site-packages/pygame/examples/data/secosmic_lo.wav
+/usr/local/lib/python2.7/site-packages/pygame/examples/data/boom.wav
+/usr/local/lib/python2.7/site-packages/pygame/examples/data/car_door.wav
+/usr/local/lib/python2.7/site-packages/pygame/examples/data/punch.wav
+/usr/local/lib/python2.7/site-packages/pygame/examples/data/whiff.wav
+/usr/local/lib/python2.7/site-packages/pygame/examples/data/house_lo.wav
+/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm24.wav
+/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm32.wav
+/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm16.wav
+/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm8.wav
+/usr/local/share/kivy-examples/audio/12927_sweet_trip_mm_sweep_z.wav
+/usr/local/share/kivy-examples/audio/12922_sweet_trip_mm_kwik_mod_07.wav
+/usr/local/share/kivy-examples/audio/12919_sweet_trip_mm_kwik_mod_04.wav
+/usr/local/share/kivy-examples/audio/12908_sweet_trip_mm_clap_hi.wav
+/usr/local/share/kivy-examples/audio/12915_sweet_trip_mm_kick_mid.wav
+/usr/local/share/kivy-examples/audio/12913_sweet_trip_mm_kick_hi.wav
+/usr/local/share/kivy-examples/audio/12910_sweet_trip_mm_clap_mid.wav
+/usr/local/share/kivy-examples/audio/12916_sweet_trip_mm_kwik_mod_01.wav
+/usr/local/share/kivy-examples/audio/12909_sweet_trip_mm_clap_lo.wav
+/usr/local/share/kivy-examples/audio/12925_sweet_trip_mm_sweep_x.wav
+/usr/local/share/kivy-examples/audio/12918_sweet_trip_mm_kwik_mod_03.wav
+/usr/local/share/kivy-examples/audio/12917_sweet_trip_mm_kwik_mod_02.wav
+/usr/local/share/kivy-examples/audio/12920_sweet_trip_mm_kwik_mod_05.wav
+/usr/local/share/kivy-examples/audio/12914_sweet_trip_mm_kick_lo.wav
+/usr/local/share/kivy-examples/audio/12911_sweet_trip_mm_hat_cl.wav
+/usr/local/share/kivy-examples/audio/12926_sweet_trip_mm_sweep_y.wav
+/usr/local/share/kivy-examples/audio/12921_sweet_trip_mm_kwik_mod_06.wav
+/usr/local/share/kivy-examples/audio/12923_sweet_trip_mm_metal_clave.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/042_F#1KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/072_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/050_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/051_D#2KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/031_G0KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/086_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/062_D3KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/035_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/095_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/077_F4KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/090_F#5KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/077_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/070_A#3KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/038_D1KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/042_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/038_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/058_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/054_F#2KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/077_F4KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/090_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/070_A#3KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/038_D1KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/068_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/060_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/099_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/050_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/072_C4KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/031_G0KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/062_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/058_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/081_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/065_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/035_B0KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/062_D3KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/068_G#3KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/101_F6KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/064_E3KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/065_F3KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/086_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/082_A#4KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/065_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/095_B5KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/060_C3KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/062_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/099_D#6KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/086_D5KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/031_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/045_A1KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/068_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/095_B5KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/054_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/024_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/081_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/095_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/038_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/045_A1KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/045_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/065_F3KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/070_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/035_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/058_A#2KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/060_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/064_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/101_F6KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/045_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/090_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/064_E3KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/065_F3KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/070_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/058_A#2KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/072_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/045_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/064_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/054_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/054_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/081_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/060_C3KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/099_D#6KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/086_D5KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/024_C0KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/050_D2KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/099_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/095_B5KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/060_C3KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/099_D#6KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/086_D5KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/039_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/024_C0KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/031_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/045_A1KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/050_D2KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/101_F6KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/064_E3KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/077_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/101_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/058_A#2KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/042_F#1KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/050_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/072_C4KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/070_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/031_G0KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/058_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/065_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/035_B0KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/068_G#3KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/054_F#2KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/090_F#5KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/063_D#3KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/038_D1KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/081_A4KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/068_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/060_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/054_F#2KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/063_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/077_F4KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/090_F#5KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/077_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/081_A4KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/070_A#3KM56_S.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/042_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/031_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/024_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/064_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/072_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/042_F#1KM56_H.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/042_ped_mf.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/072_C4KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/101_ped_h.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/035_B0KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/086_ped_s.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/Grand Piano/068_G#3KM56_M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/09f9bG#1 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/34f7aA4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/28f7aD#4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/06f9bF1 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/22f7aA3 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/16n7aD#3.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/31f2aC#6.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/28m2aA#5.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/25m2aG5.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/28n7aD#4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/25f7aC4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/17f7aE3 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/31m2aC#6.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/06m9bF1 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/19f7aF#3.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/28f2aA#5.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/35m2aF6.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/31f7aF#4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/25f2aG5.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/08n7aG2.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/35n7aA#4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/31n7aF#4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/08f7aG2.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/06f7aF2.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/19f2aC#5.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/19n7aF#3.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/13n7aC3.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/19m2aC#5.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/13f7aC3.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/34f2aE6.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/09m9bG#1 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/10f7aA2.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/25n7aC4 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/22n7aA3 M.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/05n7aE2.wav
+/Library/Application Support/GarageBand/Instrument Library/Sampler/Sampler Files/String Ensemble/10n7aA2.wav
+/Library/Python/2.7/site-packages/pygame/examples/data/secosmic_lo.wav
+/Library/Python/2.7/site-packages/pygame/examples/data/boom.wav
+/Library/Python/2.7/site-packages/pygame/examples/data/car_door.wav
+/Library/Python/2.7/site-packages/pygame/examples/data/punch.wav
+/Library/Python/2.7/site-packages/pygame/examples/data/whiff.wav
+/Library/Python/2.7/site-packages/pygame/examples/data/house_lo.wav
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/test/audiodata/pluck-pcm24.wav
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/test/audiodata/pluck-pcm32.wav
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/test/audiodata/pluck-pcm16.wav
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/test/audiodata/pluck-pcm8.wav
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/test/sndhdrdata/sndhdr.wav
+/System/Library/PrivateFrameworks/TelephonyUtilities.framework/Versions/A/Resources/hold.wav
+/System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds/Collaboration.wav
+/System/Library/PrivateFrameworks/AudioPasscode.framework/Versions/A/Resources/FadingPingPong.wav
+/System/Library/PrivateFrameworks/AudioPasscode.framework/Versions/A/Resources/Lighthouse.wav
+/System/Library/PrivateFrameworks/AudioPasscode.framework/Versions/A/Resources/WOCAudioPasscodeTone.wav
+/System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/Resources/audio/Composite.wav
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm24.wav
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm32.wav
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm16.wav
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm8.wav
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/scipy/io/tests/data/test-44100-le-1ch-4bytes.wav
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/scipy/io/tests/data/test-8000-le-2ch-1byteu.wav
+/Users/jbom/Music/iTunes/iTunes Media/Music/Unknown Artist/Unknown Album/msg0013.WAV
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/whistle-long.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/tennis.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/Crowd.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/whistle.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/sound2.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/sound3.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/sound1.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/sound4.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/sound5.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/camera.wav
+/Users/joaobom/Library/Application Support/Google/Chrome/Default/Extensions/gocaejggjgdmkhmbinicknpbhagkblop/0.65_0/Sounds/sound6.wav
+/Users/goncalo/Music/iTunes/iTunes Media/Music/Unknown Artist/Unknown Album/whiff.wav
+/Users/goncalo/Desktop/Python/programas/other_people/Snake/Resources/eat_apple.wav
+/Users/goncalo/Desktop/Python/programas/test/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/secosmic_lo.wav
+/Users/goncalo/Desktop/Python/programas/test/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/boom.wav
+/Users/goncalo/Desktop/Python/programas/test/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/car_door.wav
+/Users/goncalo/Desktop/Python/programas/test/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/punch.wav
+/Users/goncalo/Desktop/Python/programas/test/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/whiff.wav
+/Users/goncalo/Desktop/Python/programas/test/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/house_lo.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/disconnect.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/human_man.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/undeafen.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/user_leave.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/ptt_stop.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/call_calling.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/robot_man.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/ddr-up.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/mention1.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/mention2.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/ddr-down.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/mention3.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/deafen.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/call_ringing_beat.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/unmute.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/mute.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/ddr-right.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/message1.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/ptt_start.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/ddr-left.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/message2.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/reconnect.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/overlayunlock.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/message3.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/user_moved.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/call_ringing.wav
+/Users/goncalo/Library/Application Support/discord/0.0.250/modules/discord_voice/sounds/user_join.wav
+/Users/goncalo/Library/Mail/V5/F37A64BB-C8CC-4A58-90F2-AD56D9E1238A/Deleted Items.mbox/E2C5CAB2-20AF-4535-95DD-93AC7276D78D/Data/9/4/Attachments/49599/2/msg0048.WAV
+/Users/goncalo/Library/Mail/V5/F37A64BB-C8CC-4A58-90F2-AD56D9E1238A/Deleted Items.mbox/E2C5CAB2-20AF-4535-95DD-93AC7276D78D/Data/9/4/Attachments/49431/2/msg0027.WAV
+/Users/goncalo/Library/Mail/V5/F37A64BB-C8CC-4A58-90F2-AD56D9E1238A/Deleted Items.mbox/E2C5CAB2-20AF-4535-95DD-93AC7276D78D/Data/9/4/Attachments/49228/2/msg0047.WAV
+/Users/goncalo/.Trash/build 09.39.02/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/secosmic_lo.wav
+/Users/goncalo/.Trash/build 09.39.02/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/boom.wav
+/Users/goncalo/.Trash/build 09.39.02/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/car_door.wav
+/Users/goncalo/.Trash/build 09.39.02/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/punch.wav
+/Users/goncalo/.Trash/build 09.39.02/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/whiff.wav
+/Users/goncalo/.Trash/build 09.39.02/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/house_lo.wav
+/Users/goncalo/.Trash/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/secosmic_lo.wav
+/Users/goncalo/.Trash/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/boom.wav
+/Users/goncalo/.Trash/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/car_door.wav
+/Users/goncalo/.Trash/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/punch.wav
+/Users/goncalo/.Trash/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/whiff.wav
+/Users/goncalo/.Trash/build/exe.macosx-10.10-x86_64-2.7/lib/pygame/examples/data/house_lo.wav
+/Applications/GoToMeeting.app/Contents/Resources/G2MTestSound.wav
+/Applications/GoToMeeting/GoToMeeting (5530).app/Contents/Resources/G2MTestSound.wav
+/Applications/Microsoft Office 2011/Office/OutlookCore.framework/Versions/14/Resources/mailerror.wav
+/Applications/Microsoft Office 2011/Office/OutlookCore.framework/Versions/14/Resources/nomail.wav
+/Applications/Microsoft Office 2011/Office/OutlookCore.framework/Versions/14/Resources/goodbye.wav
+/Applications/Microsoft Office 2011/Office/OutlookCore.framework/Versions/14/Resources/reminder.wav
+/Applications/Microsoft Office 2011/Office/OutlookCore.framework/Versions/14/Resources/welcome.wav
+/Applications/Microsoft Office 2011/Office/OutlookCore.framework/Versions/14/Resources/mailsent.wav
+/Applications/Microsoft Office 2011/Office/OutlookCore.framework/Versions/14/Resources/newmail.wav
+/Applications/Microsoft Word.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/mailerror.wav
+/Applications/Microsoft Word.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/nomail.wav
+/Applications/Microsoft Word.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/goodbye.wav
+/Applications/Microsoft Word.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/reminder.wav
+/Applications/Microsoft Word.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/welcome.wav
+/Applications/Microsoft Word.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/mailsent.wav
+/Applications/Microsoft Word.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/newmail.wav
+/Applications/GoToMeeting (7759).app/Contents/Resources/G2MTestSound.wav
+/Applications/Endpoint Security VPN.app/Contents/Resources/TracFailed.wav
+/Applications/Endpoint Security VPN.app/Contents/Resources/TracConnected.wav
+/Applications/Microsoft Excel.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/mailerror.wav
+/Applications/Microsoft Excel.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/nomail.wav
+/Applications/Microsoft Excel.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/goodbye.wav
+/Applications/Microsoft Excel.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/reminder.wav
+/Applications/Microsoft Excel.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/welcome.wav
+/Applications/Microsoft Excel.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/mailsent.wav
+/Applications/Microsoft Excel.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/newmail.wav
+/Applications/Fuze.app/Contents/Resources/chat_plink.wav
+/Applications/Fuze.app/Contents/Resources/invitation_incoming.wav
+/Applications/Fuze.app/Contents/Resources/test_speaker.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/strom.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/cow.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/laser.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/pluck.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/untie.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/apert2.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/kling.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/theetone.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/train.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/wallewal.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/kongas.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/space3.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/space2.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/horse.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/beam.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/apert.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/nature2.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/space.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/romans.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/ok.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/nature1.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/gong.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/applause.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/glasses.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/curve.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/falling.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/drama.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/soft.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/sparcle.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/left.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/top.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/ups.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/explos.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/beam2.wav
+/Applications/OpenOffice.app/Contents/share/gallery/sounds/roll.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_recording_stopped_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/channel_moved.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/channel_created.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_switched_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_connection_disconnected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/too_many_whisper_targets.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/stop_talking.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/servergroup_assigned.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_connection_connectionlost_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/sound_muted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_connection_connected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_banned_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/filetransfer_complete.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/connection_lost.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_kicked_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/no_whisper_target_found.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/you_were_banned.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_kicked_channel_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/disconnected.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/talkpower_requested.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_moved_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/channelgroup_changed.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/channel_edited.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_switched_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/away_activated.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_kicked_channel_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_recording_started_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/away_deactivated.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/you_kicked_channel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_kicked_channel_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_connection_disconnected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/whisper_notify.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_connection_connectionlost_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/chat_message_outbound.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_moved_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/connected.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_kicked_channel_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_banned_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/sound_resumed.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_connection_connected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_recording_active_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/mic_activated.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_switched_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/you_edited_server.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/channel_deleted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_switched_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/greeting.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/you_were_moved.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/talkpower_granted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/you_were_poked.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/servergroup_revoked.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/whisperlist_is_empty.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_switched_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/chat_message_inbound.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_kicked_channel_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_kicked_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_moved_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_moved_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_kicked_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/error.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_banned_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_connection_disconnected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/3d_test.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/mic_click_on.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/testsound.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/friend_moved_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_connection_connected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/talkpower_revoked.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/mic_click_off.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/neutral_kicked_channel_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/your_channel_was_edited.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/mic_muted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/insufficient_permissions.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_moved_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/channel_switched.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/filetransfer_failed.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_switched_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/you_kicked_server.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default/blocked_user_connection_connectionlost_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_recording_stopped_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/channel_moved.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/channel_created.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_switched_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_connection_disconnected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/too_many_whisper_targets.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/servergroup_assigned.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_connection_connectionlost_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/sound_muted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_connection_connected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_banned_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/filetransfer_complete.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/connection_lost.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_kicked_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/no_whisper_target_found.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/you_were_banned.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_kicked_channel_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/disconnected.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/talkpower_requested.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_moved_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/channelgroup_changed.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/channel_edited.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_switched_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/away_activated.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_kicked_channel_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_recording_started_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/away_deactivated.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/you_kicked_channel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_kicked_channel_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_connection_disconnected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_connection_connectionlost_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_moved_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/connected.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_kicked_channel_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_banned_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/sound_resumed.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_connection_connected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_recording_active_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/mic_activated.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_switched_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/you_edited_server.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/channel_deleted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_switched_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/greeting.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/you_were_moved.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/talkpower_granted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/you_were_poked.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/servergroup_revoked.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/whisperlist_is_empty.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_switched_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_kicked_channel_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_kicked_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_moved_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_moved_awayfromcurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_kicked_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/error.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_banned_server_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_connection_disconnected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/testsound.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/friend_moved_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_connection_connected_currentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/talkpower_revoked.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/neutral_kicked_channel_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/your_channel_was_edited.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/mic_muted.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/insufficient_permissions.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_moved_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/channel_switched.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/filetransfer_failed.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_switched_tocurrentchannel.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/you_kicked_server.wav
+/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/sound/default_male/blocked_user_connection_connectionlost_currentchannel.wav
+/Applications/Microsoft PowerPoint.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/mailerror.wav
+/Applications/Microsoft PowerPoint.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/nomail.wav
+/Applications/Microsoft PowerPoint.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/goodbye.wav
+/Applications/Microsoft PowerPoint.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/reminder.wav
+/Applications/Microsoft PowerPoint.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/welcome.wav
+/Applications/Microsoft PowerPoint.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/mailsent.wav
+/Applications/Microsoft PowerPoint.app/Contents/Frameworks/OutlookCore.framework/Versions/A/Resources/newmail.wav
+/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm24.wav
+/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm32.wav
+/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm16.wav
+/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/audiodata/pluck-pcm8.wav

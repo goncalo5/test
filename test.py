@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-erro_msg = """
-\n\nI don't understand your answer,
-please select one of the below posiblilities
-"""
+import random
 
-print erro_msg
+print random.randrange(-10, 10)

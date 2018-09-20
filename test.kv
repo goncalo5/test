@@ -1,0 +1,72 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+
+ScreenManagement:
+    transation: FadeTransition()
+    MainScreen
+    AnotherScreen
+
+
+<ScreenTitule@Label>:
+    color: 0,1,0,1
+    text_size: self.size
+    halign: 'center'
+    valign: 'top'
+
+<SmallButton@Button>:
+    size_hint: 0.15, 0.1
+    font_size: 20
+
+<QuitButton@Button>:
+    text: "Quit"
+    pos_hint: {"x": 0, "top": 1}
+    size_hint: 0.15, 0.1
+    font_size: 20
+    color: 1,0,0,1
+    on_release: app.stop()
+
+
+<MainScreen>:
+    name: "main"
+    ScreenTitule:
+        text: "Main Screen"
+    SmallButton:
+        text: "Next Screen"
+        pos_hint: {"right": 1, "top": 1}
+        on_release: app.root.current = "other"
+    QuitButton:
+    # Label:
+    #     line_height: 10
+    #     text: "test test\n%s" % (self.strip)
+
+<NewDrawButton@Button>:
+    text: "New Draw"
+    pos_hint: {"right": 1, "y": 0.2}
+    size_hint: 0.15, 0.1
+    font_size: 20
+    # Painter:
+    #     id: draw
+    on_release: print 2
+
+<AnotherScreen>:
+    name: "other"
+    ScreenTitule:
+        text: "Draw Screen"
+    Painter:
+        id: draw
+    SmallButton:
+        text: "Back Home"
+        on_release: app.root.current = "main"
+        pos_hint: {"right": 1, "top": 1}
+    SmallButton:
+        text: "Clear"
+        # on_release: root.remove_widget(draw)
+        on_release: print 1
+        # on_release: root.clear_screen(draw)
+        pos_hint: {"right": 1, "y": 0}
+    NewDrawButton
+    # SmallButton:
+    #     text: "New Draw"
+    #     on_release: root.Painter
+    #     pos_hint: {"right": 1, "y": 0.2}
+    QuitButton:
