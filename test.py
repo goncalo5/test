@@ -1,5 +1,3 @@
-#!/usr/bin/env python
+p = (1, 2)
 
-import random
-
-print random.randrange(-10, 10)
+print '%s, %s' % p

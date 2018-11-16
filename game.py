@@ -222,8 +222,11 @@ def check_if_crashes(x, y, thing_speed, thing_startx, thing_starty):
 
 
 def game_loop():
-    pygame.mixer.music.load(MUSIC_GAME)
-    pygame.mixer.music.play(-1)
+    try:
+        pygame.mixer.music.load(MUSIC_GAME)
+        pygame.mixer.music.play(-1)
+    except pygame.error as ex:
+        print ex
 
     x = (display_width * 0.45)
     y = (display_height * 0.75)
