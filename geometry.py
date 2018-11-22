@@ -159,7 +159,7 @@ class Polygon(object):
     def __init__(self, *args):
         self.name = self.__class__.__name__
         print(self.name)
-        self.vertices = tuple(Point(arg) for arg in args)
+        self.vertices = list(Point(arg) for arg in args)
 
         self.calc_edges()
         self.calc_area()
@@ -188,8 +188,16 @@ class Polygon(object):
         self.perimeter = sum(edge.length() for edge in self.edges)
 
     def __repr__(self):
-        string = '%s, ' * self.n % self.vertices
+        string = '%s, ' * self.n % tuple(self.vertices)
         return '%s(%s)' % (self.name, string[:-2])
+
+    def __getitem__(self, index):
+        return self.vertices[index]
+
+    def __setitem__(self, index, value):
+        print index
+        print value
+        self.vertices[index] = Point(value)
 
     def __add__(self, other):
         self.vertices = tuple(map(lambda vertice: vertice + other, self.vertices))
@@ -221,18 +229,23 @@ v.append(Vector(0, 1))
 
 
 t1 = Triangle(c1, c2, c3)
-
-print(t1)
-print(t1.n)
-print(t1.area)
-print(t1.perimeter)
-
-t1 = Quadrilateral(c1, c2, c3, c4)
+print t1[0]
+print t1[1]
+print t1[2]
+t1[0] = Point(1, 0)
 print t1
 
-t1 = t1 + v1
+# print(t1)
+# print(t1.n)
+# print(t1.area)
+# print(t1.perimeter)
 
-print(t1)
-print(t1.n)
-print(t1.area)
-print(t1.perimeter)
+# t1 = Quadrilateral(c1, c2, c3, c4)
+# print t1
+#
+# t1 = t1 + v1
+
+# print(t1)
+# print(t1.n)
+# print(t1.area)
+# print(t1.perimeter)
