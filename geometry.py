@@ -1,7 +1,7 @@
 from collections import *
 from itertools import *
 from time import *
-from math import sqrt
+from math import sqrt, atan, pi
 
 
 class Point(object):
@@ -23,6 +23,9 @@ class Point(object):
 
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
+
+    def __hash__(self):
+        return True
 
     def __repr__(self):
         return 'Point(%s, %s)' % (self.x, self.y)
@@ -60,38 +63,164 @@ class Point(object):
     def __neg__(self):
         return Point(-self.x, -self.y)
 
+    def __abs__(self):
+        return Point(abs(self.x), abs(self.y))
 
-c1 = Point(0, 0)
-c2 = Point(1, 1)
-c3 = Point(1, 2)
 
-c3 = Point(c2)
-# print c3
+class Angle(object):
+    def __init__(self, degrees=None, radians=None):
+        if radians is None and degrees is None:
+            raise Exception('Invalid Angle!')
+        if radians is not None:
+            self.radians = radians % (2 * pi)
+            self.calc_degrees()
+        elif degrees is not None:
+            self.degrees = degrees % 360
+            self.calc_radians()
+
+    def calc_degrees(self):
+        self.degrees = self.radians * 180 / pi
+
+    def calc_radians(self):
+        self.radians = self.degrees * pi / 180
+
+    def __eq__(self, other):
+        return self.radians == other.radians
+
+    def __ne__(self, other):
+        return self.radians != other.radians
+
+    def __lt__(self, other):
+        return self.radians < other.radians
+
+    def __le__(self, other):
+        return self.radians <= other.radians
+
+    def __gt__(self, other):
+        return self.radians > other.radians
+
+    def __ge__(self, other):
+        return self.radians >= other.radians
+
+    def __repr__(self):
+        return 'Angle(%s)' % self.degrees
+
+    def __add__(self, other):
+        return Angle(self.degrees + other.degrees)
+
+    def __sub__(self, other):
+        return Angle(self.degrees - other.degrees)
+
+    def __mul__(self, other):
+        return Angle(self.degrees * other)
+
+    def __div__(self, other):
+        return Angle(self.degrees / other)
+
+    def __rmul__(self, other):
+        return Angle(other * self.degrees)
+
+    def __neg__(self):
+        return Angle(-self.degrees)
 
 
 class Edge(object):
     def __init__(self, *args):
         # print args
         args = args if len(args) == 2 else args[0]
-        self.points = tuple(Point(arg) for arg in args)
+        # print args
+        try:
+            self.points = args.points
+        except AttributeError:
+            self.points = tuple(Point(arg) for arg in args)
 
-    def length(self):
-        return self.points[0].dist(self.points[1])
+        self.calc_deltas()
+        self.calc_length()
+        self.calc_angle()
 
     def __repr__(self):
         return 'Edge(%s, %s)' % (self.points)
 
+    def calc_deltas(self):
+        self.dx = self.points[1].x - self.points[0].x
+        self.dy = self.points[1].y - self.points[0].y
+
+    def calc_length(self):
+        self.length = self.points[0].dist(self.points[1])
+
+    def calc_angle(self):
+        if self.length <= 0:
+            self.angle = None
+        else:
+            try:
+                self.angle = Angle(radians=atan(self.dy / self.dx))
+            except ZeroDivisionError:
+                self.angle = Angle(90 if self.dy > 0 else -90)
+
     def __eq__(self, other):
-        if self.points == other.points or self.points[::-1] == other.points:
-            return True
-        return False
+        return set(self.points) == set(other.points)
+
+    def __ne__(self, other):
+        return set(self.points) != set(other.points)
+
+    def __lt__(self, other):
+        return self.length < other.length
+
+    def __le__(self, other):
+        return self.length <= other.length
+
+    def __gt__(self, other):
+        return self.length > other.length
+
+    def __ge__(self, other):
+        return self.length >= other.length
 
 
-# print Edge(c1, c2) == Edge(Point(0, 0), Point(1, 1))
-# print Edge(c1, c2).points
-# print Edge(c1, c2).length()
-# print Edge((c1, c2)).points
-# print Edge((c1, c2)).length()
+p00 = Point(0, 0)
+p01 = Point(0, 1)
+p11 = Point(1, 1)
+e1 = Edge(p00, p01)
+e2 = Edge(e1)
+e3 = Edge(p00, p11)
+# print e1 + e2
+# print 5, Edge(p00, p01) >= Edge(p00, p11)
+
+
+class Edges(object):
+    def __init__(self, *args):
+        self.edges = tuple(Edge(arg) for arg in args)
+
+    def __repr__(self):
+        string = '%s, ' * len(self.edges) % tuple(self.edges)
+        return 'Edges(%s)' % (string[:-2])
+
+    def __len__(self):
+        return len(self.edges)
+
+
+# for Edge:
+def __add__(self, other):
+    return Edges(self, other)
+
+
+def __sub__(self, other):
+    return Edges() if self == other else self
+
+
+Edge.__add__ = __add__
+Edge.__sub__ = __sub__
+print e1 + e2
+print e1 - e2
+print e1 - e3
+
+print Edges()
+e1 = Edge(p00, p01)
+e2 = Edge(p01, p11)
+# print Edges(p00, p01)
+print 11, Edges((p00, p01))
+print 12, Edges(e1)
+print 13, Edges(e1, e2)
+print 14, Edges(e1, (p01, p11))
 
 
 class Vector(object):
@@ -108,14 +237,26 @@ class Vector(object):
             raise Exception('Invalid Dimension!')
         self.x, self.y = points[0].get_tuple()
 
-    def get_tuple(self):
-        return self.x, self.y
-
-    def length(self):
-        return Point(0, 0).dist(Point(self.get_tuple()))
+        self.calc_length()
+        self.calc_angle()
 
     def __repr__(self):
         return 'Vector(%s, %s)' % (self.x, self.y)
+
+    def get_tuple(self):
+        return self.x, self.y
+
+    def calc_length(self):
+        self.length = Point(0, 0).dist(Point(self.get_tuple()))
+
+    def calc_angle(self):
+        if self.length <= 0:
+            self.angle = None
+        else:
+            try:
+                self.angle = Angle(radians=atan(self.y / self.x))
+            except ZeroDivisionError:
+                self.angle = Angle(90 if self.y > 0 else -90)
 
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
@@ -158,12 +299,15 @@ class Vector(object):
 class Polygon(object):
     def __init__(self, *args):
         self.name = self.__class__.__name__
-        print(self.name)
         self.vertices = list(Point(arg) for arg in args)
 
         self.calc_edges()
         self.calc_area()
         self.calc_perimeter()
+
+    def __repr__(self):
+        string = '%s, ' * self.n % tuple(self.vertices)
+        return '%s(%s)' % (self.name, string[:-2])
 
     def calc_edges(self):
         self.edges = []
@@ -185,18 +329,12 @@ class Polygon(object):
         self.area = abs(soma)
 
     def calc_perimeter(self):
-        self.perimeter = sum(edge.length() for edge in self.edges)
-
-    def __repr__(self):
-        string = '%s, ' * self.n % tuple(self.vertices)
-        return '%s(%s)' % (self.name, string[:-2])
+        self.perimeter = sum(edge.length for edge in self.edges)
 
     def __getitem__(self, index):
         return self.vertices[index]
 
     def __setitem__(self, index, value):
-        print index
-        print value
         self.vertices[index] = Point(value)
 
     def __add__(self, other):
@@ -217,35 +355,3 @@ class Quadrilateral(Polygon):
 
     def __init__(self, *args):
         super(Quadrilateral, self).__init__(*args)
-
-
-c1 = Point(0, 0)
-c2 = Point(0, 1)
-c3 = Point(1, 1)
-c4 = Point(1, 0)
-v1 = Vector(0, 1)
-v = []
-v.append(Vector(0, 1))
-
-
-t1 = Triangle(c1, c2, c3)
-print t1[0]
-print t1[1]
-print t1[2]
-t1[0] = Point(1, 0)
-print t1
-
-# print(t1)
-# print(t1.n)
-# print(t1.area)
-# print(t1.perimeter)
-
-# t1 = Quadrilateral(c1, c2, c3, c4)
-# print t1
-#
-# t1 = t1 + v1
-
-# print(t1)
-# print(t1.n)
-# print(t1.area)
-# print(t1.perimeter)

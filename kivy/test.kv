@@ -1,0 +1,40 @@
+#:kivy 1.10.0
+
+
+    
+<MyRootWidget>:
+    cols: 1
+    resources: resources_kv
+
+    height: root.height
+    width: root.width
+    Button:
+    Resources:
+        id: resources_kv
+
+    GridLayout:
+        orientation: "horizontal"
+        TabbedPanel:
+            text: "1st tab"
+            Label:
+                text: "content of first panel"
+
+
+<Resources>:
+    cols:5
+    GridLayout:
+        cols:1
+        Label:
+            text: "resources"
+    GridLayout:
+        cols:1
+        Label:
+            text: "food"
+        Label:
+            text: str(root.food)
+    GridLayout:
+        cols:1
+        Label:
+            text: "1"
+        Label:
+            text: "1"

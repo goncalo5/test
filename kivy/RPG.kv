@@ -1,0 +1,117 @@
+#:kivy 1.0.9
+
+<Resources>:
+    cols: 5
+    Label:
+        text: "Resources"
+        font_size: 20
+        color: 0,1,0,1
+        #center: 100, root.height - 100
+    GridLayout:
+        cols: 1
+        Label:
+            text: "food"
+        Label:
+            text: str(root.food)
+    GridLayout:
+        cols: 1
+        Label:
+            text: "wood"
+        Label:
+            text: str(root.wood)
+    GridLayout:
+        cols: 1
+        Label:
+            text: "stone"
+        Label:
+            text: str(root.resources_list[2])
+        
+<Units>:
+    cols: 6
+    Label:
+        text: "Units"
+        font_size: 20
+        color: 1,0,0,1
+        #center: 100, root.height - 100
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Villager"
+        Label:
+            text: str(root.villager)
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Spearman"
+        Label:
+            text: str(root.spearman)
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Axeman"
+        Label:
+            text: str(root.axeman)
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Swordsman"
+        Label:
+            text: str(root.swordsman)
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Cavalry"
+        Label:
+            text: str(root.cavalry)
+
+<MainMenu>:
+    rows: 1
+    Button:
+        text: "Recruit"
+        on_release: app.root.change_to_menu_recruit()
+    Button:
+
+<RecruitMenu>:
+    rows: 1
+    Button:
+        text: "Villager"
+    Button:
+
+<Game>:
+    cols: 1
+    #rows: 2
+    resources: resources
+    units: units
+    main_menu: main_menu
+    #menu_recruit: menu_recruit
+    Label:
+        text: "Main Menu"
+        font_size: 30
+        center: root.center_x, root.height - 50
+        size_hint_y: 0.1
+
+        canvas.before:
+            Color:
+                rgba: 1, .5, 0, .2
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    Resources:
+        id: resources
+        size_hint_y: 0.2
+        canvas.before:
+            Color:
+                rgba: 0, 1, 0, .2
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    Units:
+        id: units
+        canvas.before:
+            Color:
+                rgba: 1, 0, 0, .2
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    MainMenu:
+        id: main_menu
