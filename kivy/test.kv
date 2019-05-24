@@ -1,40 +1,31 @@
 #:kivy 1.10.0
 
 
-    
-<MyRootWidget>:
-    cols: 1
-    resources: resources_kv
 
-    height: root.height
-    width: root.width
+
+<RecruitMenu>:
+    rows: 1
     Button:
-    Resources:
-        id: resources_kv
+        text: "Villager"
+    Button:
+
+<SampBoxLayout>:
+ 
 
     GridLayout:
-        orientation: "horizontal"
+        rows: 1
         TabbedPanel:
-            text: "1st tab"
-            Label:
-                text: "content of first panel"
+            do_default_tab: False
 
-
-<Resources>:
-    cols:5
-    GridLayout:
-        cols:1
-        Label:
-            text: "resources"
-    GridLayout:
-        cols:1
-        Label:
-            text: "food"
-        Label:
-            text: str(root.food)
-    GridLayout:
-        cols:1
-        Label:
-            text: "1"
-        Label:
-            text: "1"
+            TabbedPanelItem:
+                text: "recruitment"
+                RecruitMenu:
+            TabbedPanelItem:
+                text: "2nd Tab"
+                Label:
+                    text: "Content of Second Panel"
+            TabbedPanelItem:
+                text: "3rd Tab"
+                Label:
+                    text: "Content of Third Panel"
+ 

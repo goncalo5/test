@@ -6,11 +6,9 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty
 from kivy.core.window import Window
 from kivy.uix.popup import Popup
-from kivy.uix.gridlayout import GridLayout
-
-print(dir(kivy.uix))
+ 
 # Used to display popup
-class RecruitMenu(GridLayout):
+class CustomPopup(Popup):
     pass
  
 class SampBoxLayout(BoxLayout):
