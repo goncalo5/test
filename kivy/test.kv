@@ -1,31 +1,15 @@
 #:kivy 1.10.0
 
 
+<Player>:
+    canvas:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        
 
 
-<RecruitMenu>:
-    rows: 1
-    Button:
-        text: "Villager"
-    Button:
-
-<SampBoxLayout>:
- 
-
-    GridLayout:
-        rows: 1
-        TabbedPanel:
-            do_default_tab: False
-
-            TabbedPanelItem:
-                text: "recruitment"
-                RecruitMenu:
-            TabbedPanelItem:
-                text: "2nd Tab"
-                Label:
-                    text: "Content of Second Panel"
-            TabbedPanelItem:
-                text: "3rd Tab"
-                Label:
-                    text: "Content of Third Panel"
- 
+<Test>
+    Player:

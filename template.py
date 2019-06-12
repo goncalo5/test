@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from os import path
 import random
 import pygame as pg
