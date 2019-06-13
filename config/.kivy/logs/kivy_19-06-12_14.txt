@@ -1,0 +1,20 @@
+[INFO   ] Logger: Record log in /Users/goncalo/.kivy/logs/kivy_19-06-12_14.txt
+[INFO   ] Kivy: v1.10.1
+[INFO   ] Python: v3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) 
+[Clang 6.0 (clang-600.0.57)]
+[INFO   ] Factory: 194 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_imageio, img_dds, img_sdl2, img_gif (img_pil, img_ffpyplayer ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL ES 2" graphics system
+[INFO   ] GL: Backend used <gl>
+[INFO   ] GL: OpenGL version <b'2.1 INTEL-12.9.22'>
+[INFO   ] GL: OpenGL vendor <b'Intel Inc.'>
+[INFO   ] GL: OpenGL renderer <b'Intel Iris OpenGL Engine'>
+[INFO   ] GL: OpenGL parsed version: 2, 1
+[INFO   ] GL: Shading version <b'1.20'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <16>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Base: Start application main loop
+[INFO   ] Base: Leaving application in progress...

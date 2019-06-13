@@ -1,3 +1,7 @@
-a = "n/a"
-b = a.split(",")
-print("n" in a)
+a = [1,2,3]
+
+b = a
+
+b[2] = 5
+
+print(a)
