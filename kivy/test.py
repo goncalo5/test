@@ -9,9 +9,23 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy import properties as kp
 from kivy.animation import Animation
 from kivy.core.window import Window
+from kivy.uix.image import Image
+from kivy.graphics import Rotate, Rectangle
 
-class Player(Widget):
-    pass
+
+class Sprite(Image): 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.size = self.texture_size
+
+class Player(Sprite):
+    def __init__(self, **kwargs):
+        super().__init__(source="imgs/BirdS_0000_Capa-1.png")
+        # self.source="imgs/BirdS_0000_Capa-1.png"
+        with self.canvas.before:
+            Rotate(axis=(0,1,0), angle=180, origin=self.center)
+            # Rectangle(pos=self.pos, size=self.size, source="imgs/BirdS_0000_Capa-1.png")
+
 
 class Test(Widget):
     pass
