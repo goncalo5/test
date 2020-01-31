@@ -1,9 +1,30 @@
+<<<<<<< HEAD
 
 <Player>:
     # size: 20, 20
+=======
+
+# BoxLayout:
+#     Joystick:
+#         sticky: False
+#         outer_size: 1
+#         inner_size: 0.75
+#         pad_size:   0.5
+#         outer_line_width: 0.01
+#         inner_line_width: 0.01
+#         pad_line_width:   0.01
+#         outer_background_color: (0.75, 0.75, 0.75, 0.3)
+#         outer_line_color:       (0.25, 0.25, 0.25, 0.3)
+#         inner_background_color: (0.75, 0.75, 0.75, 0.1)
+#         inner_line_color:       (0.7,  0.7,  0.7,  0.1)
+#         pad_background_color:   (0.4,  0.4,  0.4,  0.3)
+#         pad_line_color:         (0.35, 0.35, 0.35, 0.3)
+
+<Game>:
+>>>>>>> 9565eb56c0ba5b732a9a1e06c45af17a1db22c7a
     canvas:
         Color:
-            rgba: 1,1,1,1
+            rgba: 1,1,0,0.2
         Rectangle:
             size: self.size
             pos: self.pos
@@ -24,7 +45,48 @@
             rgba: 0,1,0,1
         Rectangle:
             size: self.size
+<<<<<<< HEAD
             pos: self.pos
+=======
+    Joystick:
+        id: joystick
+        stick: stick
+        max_dist: self.width / 4
+        size_hint: None, None
+        size: 150, 150
+        # pos_hint: {"x": None, "y": None}
+        pos_hint: {"x": 0.2, "y": 0.2}
+>>>>>>> 9565eb56c0ba5b732a9a1e06c45af17a1db22c7a
 
+        canvas:
+            Color:
+                rgba: 1,1,1,0.3
+            Rectangle:
+                pos: 0, 0
+                size: self.size
 
+<<<<<<< HEAD
 <Game>:
+=======
+
+        Widget:
+            id: stick
+            size_hint: None, None
+            size: joystick.width / 2, joystick.width / 2
+            center: joystick.center
+            canvas:
+                Color:
+                    rgba: 1, 1, 1, 1
+                Ellipse:
+                    pos: self.x - joystick.x, self.y - joystick.y
+                    # pos: self.pos
+                    size: self.size
+        Widget:
+            size_hint: None, None
+            size: joystick.size
+            canvas:
+                Color:
+                    rgba: 1, 1, 1, 1
+                Line:
+                    circle: self.center_x, self.center_y, self.width / 2
+>>>>>>> 9565eb56c0ba5b732a9a1e06c45af17a1db22c7a
