@@ -1,0 +1,26 @@
+<Player>:
+    x: 0
+    # canvas:
+    #     Color:
+    #         rgba: 1,0,0,1
+    #     Rectangle:
+    #         pos: self.pos
+    #         size: self.size
+
+<Cloud>:
+    # x: 40
+    # canvas:
+    #     Color:
+    #         rgba: 0,1,0,1
+    #     Rectangle:
+    #         pos: self.pos
+    #         size: self.size
+
+<Blue>:
+    x: 80
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        Color:
+            rgba: 0,0,1,1

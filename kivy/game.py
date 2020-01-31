@@ -11,6 +11,7 @@ from kivy.animation import Animation
 from kivy import properties as kp
 from kivy.graphics import Rotate
 from kivy.uix.label import Label
+from 
 # from kivy.atlas import Atlas
 # atlas = Atlas('imgs/bird_anim/myatlas.atlas')
 
