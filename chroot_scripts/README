@@ -1,0 +1,7 @@
+A set of scripts to install the default Axiros chroot environments including all default modules and environment settings.
+
+The standard one is make_chroot.sh - it should always work but there are others which can reduce your waiting time significantly.
+
+Note: Please make sure you check out the whole chroot_scripts directory before running any of the scripts here.
+
+

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <body>
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+      <h1>Quem quer ser milionario?</h1>
+      <p>Do you want to <a href = "{{ url_for('game') }}">
+         <b>play?</b></a></p>
+   </body>
+</html>

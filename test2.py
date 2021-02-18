@@ -1,1 +1,5 @@
-print(range(1, 0))
+import inspect 
+import collections 
+  
+# use getmodule() 
+print(inspect.getmodule(collections)) 

@@ -1,2 +1,60 @@
-a: 1
-b: 2
+components:
+  # REDIS inventory
+    # REDIS inventory
+    redis:
+      # Mandatory: instances structure
+      instances:
+        # Mandatory: name for this set of instances
+        default:
+          # Optional: security settings (if omitted, REDIS access will be password less)
+          security:
+            # Optional: Vault file to hold REDIS password (defaults to <environment>-redis-secrets-<REDIS instance name>.yml
+            vault_file: production-redis-secrets-fe.yml
+          # Optional: syslog settings (if not specified the following defaults are used)
+          syslog:
+            # Optional: is syslog enabled fro REDIS?
+            enabled: true
+            # Optional: syslog facility to use
+            facility: local0
+          # Optional: log file settings (defaults to /var/log/redis)
+          log:
+            node_path: /var/log/redis
+          # Optional: storage settings (if not specified the following defaults are used)
+          storage:
+            # Optional: REDIS data files directory
+            node_path: /var/lib/redis
+            # Optional: RDB settings (if not specified the following defaults are used)
+            rdb:
+              # Optional: RDB enabled?
+              enabled: false
+              # Optional: RDB filename
+              rdb_filename: dump.rdb
+            # Optional: AOF settings (if not specified the following defaults are used)
+            aof:
+              # Optional: AOF enabled?
+              enabled: false
+              # Optional: RDB filename
+              aof_filename: appendonly.aof
+          # Optional: network settings
+          network:
+            # Optional: to which port should this instance be listening? Optional (defaults to 6379) and MAY be overriden and the node level bellow
+            port: 6379
+            # Optional: bind network or bind address (defaults to bind address 127.0.0.1), MAY be overriden and the node level bellow
+            bind_address: 127.0.0.1
+          # Optional: LUA scriptiing settings  (if not specified the following defaults are used)
+          lua:
+            # Optional: LUA script exec timeout
+            time_limit_ms: 5000
+          # Mandatory: on which nodes should this instance be present? Either specify the nodes or a list of groups (see bellow)
+          nodes:
+            sb:
+            nb:
+        # Mandatory: name for this set of instances
+        extra:
+          network:
+            port: 6380
+            # Optional: bind network or bind address (defaults to bind address 127.0.0.1), MAY be overriden and the node level bellow
+            bind_address: 127.0.0.1
+          # Mandatory: on which nodes should this instance be present? Groups should match the hosts/nodes groups specs
+          groups:
+            nb

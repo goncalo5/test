@@ -1,0 +1,1419 @@
+{
+	"zeo-pull-master-node": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"stunneld-nodes": {
+		"hosts": ["db1", "aio"],
+		"children": [],
+		"vars": {}
+	},
+	"all": {
+		"hosts": [],
+		"children": ["nb", "sb", "database", "monitoring"],
+		"vars": {
+			"install_axess_optional_packages": true,
+			"chroot_absolute_path": "/opt/lab_axess",
+			"mysql_connector_pointers": {
+				"axessdb-connector": {
+					"type": "direct",
+					"connector_name": "axessdb-connector",
+					"supporting_instance": "axessdb",
+					"databases": {
+						"live": {
+							"enable_replication": true,
+							"collation": "utf8mb4_unicode_ci",
+							"security": {
+								"ro_grafana_username": "grafana_ro",
+								"rw_username": "livedbuser",
+								"vault_file": "lab-mysql-db-secrets-axessdb-live.yml",
+								"ro_username": "ax_ro"
+							},
+							"characterset": "utf8mb4",
+							"storage_engine": "InnoDB"
+						}
+					},
+					"security": {
+						"log_adm_username": "ax_logs",
+						"replication_username": "rep",
+						"root_username": "root",
+						"vault_file": "lab-mysql-server-secrets-axessdb.yml"
+					},
+					"config": {
+						"network": {
+							"node": "db1",
+							"bind_port": 3306,
+							"alias": "axessdb-proxy.query",
+							"bind_address": "0.0.0.0",
+							"address": "192.168.1.183",
+							"node_addresses": {
+								"management": "192.168.1.183",
+								"internal": "192.168.1.183"
+							},
+							"port": 3306
+						}
+					}
+				}
+			},
+			"mysql_pointers": {
+				"axessdb": {
+					"instance_name": "axessdb",
+					"security": {
+						"log_adm_username": "ax_logs",
+						"replication_username": "rep",
+						"root_username": "root",
+						"vault_file": "lab-mysql-server-secrets-axessdb.yml"
+					},
+					"seeds": [{
+						"node": "db1",
+						"bind_port": 3306,
+						"node_addresses": {
+							"management": "192.168.1.183",
+							"internal": "192.168.1.183"
+						},
+						"bind_address": "0.0.0.0"
+					}],
+					"type": "standalone",
+					"databases": {
+						"live": {
+							"enable_replication": true,
+							"collation": "utf8mb4_unicode_ci",
+							"security": {
+								"ro_grafana_username": "grafana_ro",
+								"rw_username": "livedbuser",
+								"vault_file": "lab-mysql-db-secrets-axessdb-live.yml",
+								"ro_username": "ax_ro"
+							},
+							"characterset": "utf8mb4",
+							"storage_engine": "InnoDB"
+						}
+					}
+				}
+			},
+			"gogs_globals": {
+				"read_write_user": "axess-rw",
+				"read_only_user": "axess-ro",
+				"git_clone_url": "http://192.168.1.183:3009/ACME/AXESS",
+				"vault_file": "lab-gogs-secrets.yml"
+			},
+			"ntp": {
+				"servers": ["0.debian.pool.ntp.org", "1.debian.pool.ntp.org", "2.debian.pool.ntp.org", "3.debian.pool.ntp.org"]
+			},
+			"node_ssh_keyfile": "global_node_key",
+			"ansible_user": "axiros",
+			"proxy_env": {
+				"https_proxy": "",
+				"http_proxy": ""
+			},
+			"chroot_sshd_port": 2210,
+			"all_custom_groups": ["nb", "sb", "database", "monitoring"],
+			"git": {
+				"branch": "develop",
+				"use_http_proxy": false,
+				"skip_ssl_verify": 1,
+				"security": {
+					"read_write_user": "axess-rw",
+					"read_only_user": "axess-ro",
+					"vault_file": "lab-gogs-secrets.yml"
+				},
+				"url": "http://192.168.1.183:3009/ACME/AXESS",
+				"transport": "http",
+				"http_server": "http://192.168.1.183:3009"
+			},
+			"dns": {
+				"domain": "localhost",
+				"search": ["c.axiros-pt.internal.", "google.internal."],
+				"nameservers": ["192.168.1.1"]
+			},
+			"chroot_username": "root",
+			"redis_pointers": {
+				"default": {
+					"seeds": [{
+						"node": "aio",
+						"local_only": true,
+						"node_addresses": {
+							"management": "192.168.1.183",
+							"internal": "192.168.1.183"
+						},
+						"port": 6379,
+						"address": "127.0.0.1"
+					}],
+					"type": "standalone"
+				}
+			},
+			"default_chroot_type": "jessie",
+			"address_types": ["management", "internal"],
+			"project_meta": {
+				"axess_version": "AXESS.ACS_3.10",
+				"customer_code": "ACME",
+				"environment": "lab",
+				"project_code": "AXESS",
+				"timezone": "Europe/Lisbon",
+				"customer_name": null
+			},
+			"axess_root_path": "/opt/axess"
+		}
+	},
+	"monitoring": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"_meta": {
+		"_load_time": 0.03449296951293945,
+		"hostvars": {
+			"db1": {
+				"stunneld_settings": {
+					"global_settings": {
+						"pid": "/var/run/stunnel4/stunnel4.pid",
+						"group": "stunnel4",
+						"user": "stunnel4"
+					},
+					"log": {
+						"enable_syslog": false,
+						"level": "notice",
+						"node_path": "/var/log/stunnel4/stunnel4.log",
+						"facility": "local0"
+					},
+					"component_name": "stunnel4"
+				},
+				"chroot_type": "jessie",
+				"addresses": {
+					"management": "192.168.1.183",
+					"internal": "192.168.1.183"
+				},
+				"mysql_settings": {
+					"type": "master",
+					"binlog": {
+						"sync_binlog": false,
+						"expire_logs_days": 1,
+						"format": "MIXED",
+						"enabled": true,
+						"file_prefix": "mysql-bin",
+						"node_path": "/var/log/mysql",
+						"file_index": "mysql-bin.index",
+						"max_size": "100M"
+					},
+					"innodb_settings": {
+						"buffer_pool_size": "1G",
+						"buffer_pool_instances": 1,
+						"flush_neighbors": false,
+						"flush_method": "O_DIRECT",
+						"log_file_size": "2G",
+						"file_per_table": true,
+						"checksum_algorithm": "crc32",
+						"thread_concurrency": 0,
+						"stats_on_metadata": 0,
+						"buffer_pool_dump_at_shutdown": true,
+						"log_buffer_size": "64M",
+						"flush_log_at_trx_commit": 2,
+						"autoinc_lock_mode": 2,
+						"buffer_pool_load_at_startup": true
+					},
+					"databases": {
+						"live": {
+							"enable_replication": true,
+							"collation": "utf8mb4_unicode_ci",
+							"security": {
+								"rw_username": "livedbuser",
+								"vault_file": "lab-mysql-db-secrets-axessdb-live.yml",
+								"ro_grafana_username": "grafana_ro",
+								"ro_username": "ax_ro"
+							},
+							"characterset": "utf8mb4",
+							"storage_engine": "InnoDB"
+						}
+					},
+					"slow_log": {
+						"filename": "mysql-slow.log",
+						"enabled": true,
+						"long_query_time": 1,
+						"node_path": "/var/log/mysql"
+					},
+					"network": {
+						"bind_address": "0.0.0.0",
+						"port": 3306
+					},
+					"global_settings": {
+						"transaction_isolation": "READ-COMMITTED",
+						"collation_server": "utf8mb4_unicode_ci",
+						"max_allowed_packet": "16M",
+						"skip_name_resolve": true,
+						"character_set_server": "utf8mb4",
+						"max_connections": 2000
+					},
+					"error_log": {
+						"use_syslog": false,
+						"filename": "mysql.err",
+						"node_path": "/var/log/mysql"
+					},
+					"security": {
+						"log_adm_username": "ax_logs",
+						"replication_username": "rep",
+						"root_username": "root",
+						"vault_file": "lab-mysql-server-secrets-axessdb.yml"
+					},
+					"data": {
+						"node_path": "/var/lib/mysql"
+					},
+					"myisam_settings": {},
+					"instance_name": "axessdb",
+					"component_name": "mysql",
+					"nodename": "db1",
+					"target_role": "active",
+					"replication": {
+						"server_id": 1,
+						"auto_increment_increment": 2,
+						"auto_increment_offset": 1
+					}
+				},
+				"ansible_user": "root",
+				"chroot_sshd_port": 2312,
+				"all_custom_groups": ["nb", "sb", "database", "monitoring"],
+				"ansible_ssh_common_args": "-o ProxyCommand=\"ssh -W %h:%p -q -p 22 axiros@192.168.1.183\" -o ControlPath=/root/.ansible/cp/lab-db1",
+				"host_chroots": [{
+					"chroot_absolute_path": "/opt/axess3.10",
+					"nodename": "aio",
+					"chroot_short_name": "axess",
+					"chroot_sshd_port": 2311,
+					"chroot_type": "jessie",
+					"chroot_prompt": "aio-axess"
+				}],
+				"ansible_ssh_private_key_file": "global_node_key",
+				"dns": {
+					"domain": "localhost",
+					"search": ["c.axiros-pt.internal.", "google.internal."],
+					"nameservers": ["192.168.1.1"]
+				},
+				"node_ssh_keyfile": "global_node_key",
+				"bindmounts": [],
+				"type": "chroot",
+				"project_meta": {
+					"axess_version": "AXESS.ACS_3.10",
+					"customer_code": "ACME",
+					"environment": "lab",
+					"project_code": "AXESS",
+					"timezone": "Europe/Lisbon",
+					"customer_name": null
+				},
+				"custom_groups": ["database"],
+				"chroot_absolute_path": "/opt/mysql",
+				"nodename": "db1",
+				"ntp": {
+					"servers": ["0.debian.pool.ntp.org", "1.debian.pool.ntp.org", "2.debian.pool.ntp.org", "3.debian.pool.ntp.org"]
+				},
+				"install_axess_optional_packages": true,
+				"host": "debian",
+				"chroot_username": "root",
+				"ansible_host": "127.0.0.1",
+				"ansible_port": 2312,
+				"chroot_short_name": "mysql",
+				"proxy_env": {
+					"https_proxy": "",
+					"http_proxy": ""
+				},
+				"rsyslog_settings": {
+					"network": {
+						"local_only": true,
+						"bind_address": "127.0.0.1",
+						"port": 1514
+					},
+					"component_name": "rsyslog"
+				},
+				"components": {
+					"cron": ["cron"],
+					"mysql": ["mysql"],
+					"rsyslog": ["rsyslog"],
+					"collectd": ["collectd"],
+					"stunneld": ["stunnel4"]
+				},
+				"default_chroot_type": "jessie",
+				"ports": {
+					"2311": {
+						"127.0.0.1": "ssh"
+					}
+				},
+				"axess_root_path": "/opt/axess"
+			},
+			"aio": {
+				"stunneld_settings": {
+					"global_settings": {
+						"pid": "/var/run/stunnel4/stunnel4.pid",
+						"group": "stunnel4",
+						"user": "stunnel4"
+					},
+					"log": {
+						"enable_syslog": false,
+						"level": "notice",
+						"node_path": "/var/log/stunnel4/stunnel4.log",
+						"facility": "local0"
+					},
+					"component_name": "stunnel4"
+				},
+				"chroot_type": "jessie",
+				"addresses": {
+					"management": "192.168.1.183",
+					"internal": "192.168.1.183"
+				},
+				"ansible_user": "root",
+				"chroot_sshd_port": 2311,
+				"all_custom_groups": ["nb", "sb", "database", "monitoring"],
+				"redis_connector_pointers": {
+					"local": {
+						"config": {
+							"network": {
+								"node": "aio",
+								"local_only": true,
+								"alias": "redis-local-default.query",
+								"address": "127.0.0.1",
+								"node_addresses": {
+									"management": "192.168.1.183",
+									"internal": "192.168.1.183"
+								},
+								"port": 6379
+							}
+						},
+						"security": null,
+						"raw_seeds": [{
+							"node": "aio",
+							"local_only": true,
+							"node_addresses": {
+								"management": "192.168.1.183",
+								"internal": "192.168.1.183"
+							},
+							"port": 6379,
+							"address": "127.0.0.1"
+						}],
+						"type": "local"
+					}
+				},
+				"ansible_ssh_common_args": "-o ProxyCommand=\"ssh -W %h:%p -q -p 22 axiros@192.168.1.183\" -o ControlPath=/root/.ansible/cp/lab-aio",
+				"ansible_ssh_private_key_file": "global_node_key",
+				"dns": {
+					"domain": "localhost",
+					"search": ["c.axiros-pt.internal.", "google.internal."],
+					"nameservers": ["192.168.1.1"]
+				},
+				"node_ssh_keyfile": "global_node_key",
+				"bindmounts": [],
+				"type": "chroot",
+				"proxy_env": {
+					"https_proxy": "",
+					"http_proxy": ""
+				},
+				"custom_groups": ["nb", "sb", "monitoring"],
+				"chroot_absolute_path": "/opt/axess3.10",
+				"nodename": "aio",
+				"ntp": {
+					"servers": ["0.debian.pool.ntp.org", "1.debian.pool.ntp.org", "2.debian.pool.ntp.org", "3.debian.pool.ntp.org"]
+				},
+				"zeo_settings": {
+					"storage": {
+						"node_path": "/opt/axess/var"
+					},
+					"log": {
+						"log_file": "zeo.log",
+						"node_path": "/opt/axess/var/log"
+					},
+					"network": {
+						"local_only": false,
+						"bind_address": "aio-internal",
+						"port": 8100
+					},
+					"component_name": "axess_zeo",
+					"pull_master": true
+				},
+				"gogs": {
+					"repository_transport": "http",
+					"security": {
+						"vault_file": "lab-gogs-secrets.yml",
+						"use_tls": false,
+						"read_write_user": "axess-rw",
+						"read_only_user": "axess-ro",
+						"tls": {}
+					},
+					"storage": {
+						"base": {
+							"node_path": "/opt"
+						},
+						"repositories": {
+							"node_path": "/opt/gogs-repos"
+						}
+					},
+					"network": {
+						"git_clone_url": "http://192.168.1.183:3009/ACME/AXESS",
+						"bind_address": "192.168.1.183",
+						"port": 3009,
+						"fqdn": "192.168.1.183"
+					},
+					"primary_flag": true,
+					"mirror_flag": false
+				},
+				"install_axess_optional_packages": true,
+				"host": "debian",
+				"chroot_username": "root",
+				"ansible_host": "127.0.0.1",
+				"ansible_port": 2311,
+				"zeo_connector": {
+					"local": {
+						"connector_type": "local",
+						"network": {
+							"local_only": false,
+							"node": "aio",
+							"bind_address": "aio-internal",
+							"port": 8100
+						}
+					}
+				},
+				"chroot_short_name": "axess",
+				"project_meta": {
+					"axess_version": "AXESS.ACS_3.10",
+					"customer_code": "ACME",
+					"environment": "lab",
+					"project_code": "AXESS",
+					"timezone": "Europe/Lisbon",
+					"customer_name": null
+				},
+				"rsyslog_settings": {
+					"network": {
+						"port": 1515,
+						"bind_address": "127.0.0.1",
+						"local_only": true
+					},
+					"component_name": "rsyslog"
+				},
+				"components": {
+					"scm": ["gogs"],
+					"axess_zeo": ["axess_zeo"],
+					"redis": ["redis-server"],
+					"collectd": ["collectd"],
+					"axess_zope": ["apache2"],
+					"cron": ["cron"],
+					"rsyslog": ["rsyslog"],
+					"stunneld": ["stunnel4"],
+					"axess_configurator": ["axess_configurator"]
+				},
+				"axess_settings": {
+					"mysql": {
+						"connector": "axessdb-connector",
+						"database": "live"
+					},
+					"configurator": {
+						"send_cnr": true,
+						"cnr_http_address": "127.0.0.1",
+						"log_level": 5,
+						"max_transport_errors": 5,
+						"enabled": true,
+						"up_to_date_check_cycle_limit": 5000,
+						"cnr_http_proxy_enabled": false,
+						"cnr_http_port": 7777,
+						"max_connection_timeout": 10,
+						"threads": 100,
+						"up_to_date_check_cycle": 60,
+						"sleep_time": 500
+					},
+					"interfaces": {
+						"unauth": {
+							"vhosts": {
+								"http": {
+									"tls": {
+										"use_tls": false,
+										"key_files": [],
+										"certificate_files": []
+									},
+									"log": {
+										"error_log": "lab_axess-unauth-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-unauth-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-unauth-http.cfg",
+										"late_include": "lab-axess-apache2-late_include-unauth-http.cfg"
+									},
+									"network": {
+										"bind_address": "127.0.0.1",
+										"port": 9672
+									}
+								}
+							},
+							"settings": {
+								"processes": 1,
+								"max_requests": 0,
+								"threads": 5
+							}
+						},
+						"gui": {
+							"vhosts": {
+								"http1": {
+									"tls": {
+										"use_tls": false,
+										"key_files": [],
+										"certificate_files": []
+									},
+									"log": {
+										"error_log": "lab_axess-portal-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-portal-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-gui-http1.cfg",
+										"late_include": "lab-axess-apache2-late_include-gui-http1.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 9673
+									}
+								},
+								"https": {
+									"tls": {
+										"use_tls": true,
+										"key_files": ["axess_dummy.key"],
+										"certificate_files": ["axess_dummy.crt"]
+									},
+									"log": {
+										"error_log": "lab_axess-portal-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-portal-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost:443",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-gui-https.cfg",
+										"late_include": "lab-axess-apache2-late_include-gui-https.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 443
+									}
+								},
+								"http2": {
+									"tls": {
+										"use_tls": false,
+										"key_files": [],
+										"certificate_files": []
+									},
+									"log": {
+										"error_log": "lab_axess-portal-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-portal-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-gui-http2.cfg",
+										"late_include": "lab-axess-apache2-late_include-gui-http2.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 80
+									}
+								}
+							},
+							"settings": {
+								"processes": 2,
+								"max_requests": 0,
+								"threads": 5
+							}
+						},
+						"tr069": {
+							"vhosts": {
+								"http": {
+									"tls": {
+										"use_tls": false,
+										"key_files": [],
+										"certificate_files": []
+									},
+									"log": {
+										"error_log": "lab_axess-tr069-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-tr069-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-tr069-http.cfg",
+										"late_include": "lab-axess-apache2-late_include-tr069-http.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 9675
+									}
+								},
+								"https": {
+									"tls": {
+										"use_tls": true,
+										"key_files": ["axess_dummy.key"],
+										"certificate_files": ["axess_dummy.crt"]
+									},
+									"log": {
+										"error_log": "lab_axess-tr069-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-tr069-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost:7547",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-tr069-https.cfg",
+										"late_include": "lab-axess-apache2-late_include-tr069-https.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 7547
+									}
+								}
+							},
+							"settings": {
+								"processes": 2,
+								"max_requests": 0,
+								"threads": 5
+							}
+						},
+						"apidoc": {
+							"vhosts": {
+								"http": {
+									"tls": {
+										"use_tls": false,
+										"key_files": [],
+										"certificate_files": []
+									},
+									"log": {
+										"error_log": "lab_axess-apidoc-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-apidoc-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-apidoc-http.cfg",
+										"late_include": "lab-axess-apache2-late_include-apidoc-http.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 9999
+									}
+								}
+							},
+							"settings": {
+								"server_admin": "webmaster@localhost"
+							}
+						},
+						"nbi": {
+							"vhosts": {
+								"http": {
+									"tls": {
+										"use_tls": false,
+										"key_files": [],
+										"certificate_files": []
+									},
+									"log": {
+										"error_log": "lab_axess-soap-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-soap-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-nbi-http.cfg",
+										"late_include": "lab-axess-apache2-late_include-nbi-http.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 9676
+									}
+								},
+								"https": {
+									"tls": {
+										"use_tls": true,
+										"key_files": ["axess_dummy.key"],
+										"certificate_files": ["axess_dummy.crt"]
+									},
+									"log": {
+										"error_log": "lab_axess-soap-error-%Y.%m.%d.log",
+										"acess_log_format": "combined",
+										"access_log": "lab_axess-soap-access-%Y.%m.%d.log"
+									},
+									"server_name": "localhost:8445",
+									"extra": {
+										"enable_auto_deflect": false,
+										"max_body_size": 3145728,
+										"enable_dechunk": false,
+										"keepalive_timeout": 60
+									},
+									"includes": {
+										"early_include": "lab-axess-apache2-early_include-nbi-https.cfg",
+										"late_include": "lab-axess-apache2-late_include-nbi-https.cfg"
+									},
+									"network": {
+										"bind_address": "0.0.0.0",
+										"port": 8445
+									}
+								}
+							},
+							"settings": {
+								"processes": 1,
+								"max_requests": 0,
+								"threads": 5
+							}
+						}
+					},
+					"folders": {
+						"live": {
+							"security": {
+								"vault_file": "lab-axess-zope-secrets.yml"
+							},
+							"configurator": {},
+							"products": {
+								"AXRedisConnector": {
+									"type": "AXRedisConnector",
+									"settings": {
+										"redis": {
+											"connector": "local",
+											"network": {
+												"node": "aio",
+												"local_only": true,
+												"alias": "redis-local-default.query",
+												"address": "127.0.0.1",
+												"node_addresses": {
+													"management": "192.168.1.183",
+													"internal": "192.168.1.183"
+												},
+												"port": 6379
+											},
+											"database": 0
+										}
+									}
+								},
+								"AXESSGUI": {
+									"type": "AXESSGUI",
+									"settings": {
+										"enabled": true
+									}
+								},
+								"AXManagementPortal": {
+									"type": "AXManagementPortal",
+									"settings": {
+										"enabled": false
+									}
+								},
+								"CPEManager": {
+									"type": "CPEManager",
+									"settings": {
+										"zodb_objects": {
+											"replace_dm_interfaces": false,
+											"replace_scenario_lib": false
+										},
+										"cpe_parameters": {
+											"manage_all_props": false,
+											"custom_roles": ["custom1"],
+											"max_props_size": 65000,
+											"roles": ["supportedFW", "unsupportedFW", "needUpgradeFW", "upgradingFW", "failedFWUpgrade"],
+											"disable_oui_lookup": false
+										},
+										"logging": {
+											"log_level": 5,
+											"log_scenario_exceptions": true,
+											"log_cwmp": false,
+											"delete_logs_with_cpe": false
+										},
+										"inform_handling": {
+											"custom_enabled": false,
+											"lookup_by_ip": false,
+											"lookup_by_http_auth": false,
+											"lookup_by_http_xff_header": true
+										},
+										"mysql": {
+											"network": {
+												"node": "db1",
+												"bind_port": 3306,
+												"alias": "axessdb-proxy.query",
+												"bind_address": "0.0.0.0",
+												"address": "192.168.1.183",
+												"node_addresses": {
+													"management": "192.168.1.183",
+													"internal": "192.168.1.183"
+												},
+												"port": 3306
+											},
+											"database": "live",
+											"database_security": {
+												"ro_username": "ax_ro",
+												"vault_file": "lab-mysql-db-secrets-axessdb-live.yml",
+												"ro_grafana_username": "grafana_ro",
+												"rw_username": "livedbuser"
+											},
+											"pool_size": 5,
+											"connector": "axessdb-connector",
+											"delete_resources": false,
+											"table_name": "CPEManager_CPEs",
+											"pool_recyle": -1
+										},
+										"gui_parameters": {
+											"popup": {
+												"default": 1,
+												"cpeInfo": 1,
+												"target": "_blank",
+												"scenario": 1,
+												"tester": 1
+											},
+											"props_display": {
+												"startCol": "999999",
+												"colStep": 0.5
+											},
+											"scenario": {
+												"cpeattrs": ["cpeid"],
+												"directProps": 1,
+												"log": 1,
+												"layoutAttrsPre": "<b>",
+												"state": 1,
+												"layoutAttrsPost": "</b>"
+											},
+											"direct_props": {
+												"default": 1,
+												"log": 1,
+												"scenario": 1
+											},
+											"cpe1": {
+												"cpeInfo": 1,
+												"state": 1,
+												"cpeattrs": ["cpeid"],
+												"layoutMain": "table"
+											},
+											"scenario_testers": {
+												"ramLog": 1,
+												"state": 1,
+												"log": 1,
+												"markBox": 1
+											},
+											"cpe2": {
+												"diagnose": 1,
+												"directProps": 1,
+												"log": 1,
+												"scenario": 1,
+												"support": 0,
+												"layoutMain": "table",
+												"delete": 1
+											},
+											"cwmp_client": {},
+											"props_list": {
+												"propsList": ["cpetype:Type", "lastMsgPretty:Last seen", "IP", "I.MS.PII:Inform Interval", "softwareVersion:Software Version", "hardwareVersion:Hardware Version", "model:Model", "manufacturer:Manufacturer"]
+											}
+										},
+										"configurator": {
+											"cnr_http_address": "127.0.0.1",
+											"log_level": 5,
+											"max_transport_errors": 5,
+											"enabled": true,
+											"up_to_date_check_cycle_limit": 5000,
+											"cnr_http_proxy_enabled": false,
+											"send_cnr": true,
+											"cnr_http_port": 7777,
+											"max_connection_timeout": 10,
+											"threads": 100,
+											"up_to_date_check_cycle": 60,
+											"sleep_time": 500
+										}
+									}
+								},
+								"AXCustomerSupportPortal": {
+									"type": "AXCustomerSupportPortal",
+									"settings": {
+										"enabled": true
+									}
+								},
+								"AXSchema": {
+									"type": "AXSchema",
+									"settings": {
+										"monitor_interval_seconds": 30
+									}
+								}
+							},
+							"mysql": {
+								"connector": "axessdb-connector",
+								"database_security": {
+									"ro_grafana_username": "grafana_ro",
+									"rw_username": "livedbuser",
+									"vault_file": "lab-mysql-db-secrets-axessdb-live.yml",
+									"ro_username": "ax_ro"
+								},
+								"network": {
+									"node": "db1",
+									"bind_port": 3306,
+									"alias": "axessdb-proxy.query",
+									"bind_address": "0.0.0.0",
+									"address": "192.168.1.183",
+									"node_addresses": {
+										"management": "192.168.1.183",
+										"internal": "192.168.1.183"
+									},
+									"port": 3306
+								},
+								"database": "live"
+							}
+						}
+					},
+					"redis": {
+						"connector": "local",
+						"network": {
+							"node": "aio",
+							"local_only": true,
+							"alias": "redis-local-default.query",
+							"address": "127.0.0.1",
+							"node_addresses": {
+								"management": "192.168.1.183",
+								"internal": "192.168.1.183"
+							},
+							"port": 6379
+						},
+						"database": 0
+					},
+					"zeo": {
+						"connector": "local",
+						"connector_type": "local",
+						"network": {
+							"local_only": false,
+							"node": "aio",
+							"bind_address": "aio-internal",
+							"port": 8100
+						}
+					},
+					"apache2": {
+						"threads_per_child": 25,
+						"max_request_workers": 150,
+						"threads_limit": 64,
+						"spare_threads_min": 150,
+						"spare_threads_max": 150,
+						"max_connections_per_child": 0,
+						"servers": 2,
+						"timeout": 300,
+						"keep_alive_timeout": 60
+					},
+					"products": {
+						"AXRedisConnector": {
+							"type": "AXRedisConnector",
+							"settings": {
+								"redis": {
+									"connector": "local",
+									"database": 0
+								}
+							}
+						},
+						"AXESSGUI": {
+							"type": "AXESSGUI",
+							"settings": {
+								"enabled": true
+							}
+						},
+						"AXManagementPortal": {
+							"type": "AXManagementPortal",
+							"settings": {
+								"enabled": false
+							}
+						},
+						"CPEManager": {
+							"type": "CPEManager",
+							"settings": {
+								"zodb_objects": {
+									"replace_dm_interfaces": false,
+									"replace_scenario_lib": false
+								},
+								"cpe_parameters": {
+									"disable_oui_lookup": false,
+									"custom_roles": ["custom1"],
+									"max_props_size": 65000,
+									"roles": ["supportedFW", "unsupportedFW", "needUpgradeFW", "upgradingFW", "failedFWUpgrade"],
+									"manage_all_props": false
+								},
+								"logging": {
+									"log_cwmp": false,
+									"log_scenario_exceptions": true,
+									"log_level": 5,
+									"delete_logs_with_cpe": false
+								},
+								"inform_handling": {
+									"custom_enabled": false,
+									"lookup_by_ip": false,
+									"lookup_by_http_auth": false,
+									"lookup_by_http_xff_header": true
+								},
+								"mysql": {
+									"pool_recyle": -1,
+									"delete_resources": false,
+									"table_name": "CPEManager_CPEs",
+									"pool_size": 5
+								},
+								"gui_parameters": {
+									"popup": {
+										"default": 1,
+										"cpeInfo": 1,
+										"target": "_blank",
+										"scenario": 1,
+										"tester": 1
+									},
+									"props_display": {
+										"startCol": "999999",
+										"colStep": 0.5
+									},
+									"scenario": {
+										"cpeattrs": ["cpeid"],
+										"directProps": 1,
+										"log": 1,
+										"layoutAttrsPre": "<b>",
+										"state": 1,
+										"layoutAttrsPost": "</b>"
+									},
+									"props_list": {
+										"propsList": ["cpetype:Type", "lastMsgPretty:Last seen", "IP", "I.MS.PII:Inform Interval", "softwareVersion:Software Version", "hardwareVersion:Hardware Version", "model:Model", "manufacturer:Manufacturer"]
+									},
+									"direct_props": {
+										"default": 1,
+										"log": 1,
+										"scenario": 1
+									},
+									"scenario_testers": {
+										"ramLog": 1,
+										"state": 1,
+										"log": 1,
+										"markBox": 1
+									},
+									"cpe2": {
+										"diagnose": 1,
+										"directProps": 1,
+										"log": 1,
+										"scenario": 1,
+										"support": 0,
+										"delete": 1,
+										"layoutMain": "table"
+									},
+									"cwmp_client": {},
+									"cpe1": {
+										"cpeInfo": 1,
+										"state": 1,
+										"cpeattrs": ["cpeid"],
+										"layoutMain": "table"
+									}
+								},
+								"configurator": {}
+							}
+						},
+						"AXCustomerSupportPortal": {
+							"type": "AXCustomerSupportPortal",
+							"settings": {
+								"enabled": true
+							}
+						},
+						"AXSchema": {
+							"type": "AXSchema",
+							"settings": {
+								"monitor_interval_seconds": 30
+							}
+						}
+					},
+					"security": {
+						"vault_file": "lab-axess-zope-secrets.yml"
+					},
+					"port_advertisement": {
+						"unauth": 9672,
+						"nbi": 9676,
+						"tr069": 9675,
+						"gui": 9673,
+						"apidoc": 9999
+					},
+					"component_name": "apache2",
+					"instance_name": "all-in-one",
+					"number_of_folders": 1
+				},
+				"default_chroot_type": "jessie",
+				"redis_instances": [{
+					"log": {
+						"node_path": "/var/log/redis"
+					},
+					"syslog": {
+						"enabled": false,
+						"facility": "local0"
+					},
+					"storage": {
+						"aof": {
+							"enabled": false,
+							"aof_filename": "appendonly.aof"
+						},
+						"rdb": {
+							"rdb_filename": "dump.rdb",
+							"enabled": false
+						},
+						"node_path": "/var/lib/redis"
+					},
+					"lua": {
+						"time_limit_ms": 5000
+					},
+					"type": "standalone",
+					"network": {
+						"local_only": true,
+						"port": 6379,
+						"address": "127.0.0.1"
+					},
+					"instance": "default",
+					"component_name": "redis-server"
+				}],
+				"axess_root_path": "/opt/axess"
+			},
+			"debian": {
+				"install_axess_optional_packages": true,
+				"chroot_absolute_path": "/opt/lab_axess",
+				"addresses": {
+					"management": "192.168.1.183",
+					"internal": "192.168.1.183"
+				},
+				"custom_groups": [],
+				"ntp": {
+					"servers": ["0.debian.pool.ntp.org", "1.debian.pool.ntp.org", "2.debian.pool.ntp.org", "3.debian.pool.ntp.org"]
+				},
+				"node_ssh_keyfile": "global_node_key",
+				"proxy_env": {
+					"https_proxy": "",
+					"http_proxy": ""
+				},
+				"ansible_user": "axiros",
+				"project_meta": {
+					"axess_version": "AXESS.ACS_3.10",
+					"customer_code": "ACME",
+					"environment": "lab",
+					"project_code": "AXESS",
+					"timezone": "Europe/Lisbon",
+					"customer_name": null
+				},
+				"chroot_sshd_port": 2210,
+				"all_custom_groups": ["nb", "sb", "database", "monitoring"],
+				"host_chroots": [{
+					"chroot_absolute_path": "/opt/axess3.10",
+					"nodename": "aio",
+					"chroot_short_name": "axess",
+					"chroot_sshd_port": 2311,
+					"chroot_type": "jessie",
+					"chroot_prompt": "aio-axess"
+				}, {
+					"chroot_absolute_path": "/opt/mysql",
+					"nodename": "db1",
+					"chroot_short_name": "mysql",
+					"chroot_sshd_port": 2312,
+					"chroot_type": "jessie",
+					"chroot_prompt": "db1-mysql"
+				}],
+				"dns": {
+					"domain": "localhost",
+					"search": ["c.axiros-pt.internal.", "google.internal."],
+					"nameservers": ["192.168.1.1"]
+				},
+				"chroot_username": "root",
+				"ports": {
+					"9999": {
+						"192.168.1.183": "axess-apache2-apidoc",
+						"127.0.0.1": "axess-apache2-apidoc",
+						"::1": "axess-apache2-apidoc"
+					},
+					"1515": {
+						"192.168.1.183": "rsyslog",
+						"127.0.0.1": "rsyslog",
+						"::1": "rsyslog"
+					},
+					"8100": {
+						"192.168.1.183": "zeo",
+						"127.0.0.1": "zeo",
+						"::1": "zeo"
+					},
+					"2311": {
+						"127.0.0.1": "ssh"
+					},
+					"2312": {
+						"127.0.0.1": "ssh"
+					},
+					"9673": {
+						"192.168.1.183": "axess-apache2-gui",
+						"127.0.0.1": "axess-apache2-gui",
+						"::1": "axess-apache2-gui"
+					},
+					"1514": {
+						"192.168.1.183": "rsyslog",
+						"127.0.0.1": "rsyslog",
+						"::1": "rsyslog"
+					},
+					"6379": {
+						"192.168.1.183": "redis",
+						"127.0.0.1": "redis",
+						"::1": "redis"
+					},
+					"9676": {
+						"192.168.1.183": "axess-apache2-nbi",
+						"127.0.0.1": "axess-apache2-nbi",
+						"::1": "axess-apache2-nbi"
+					},
+					"7547": {
+						"192.168.1.183": "axess-apache2-tr069",
+						"127.0.0.1": "axess-apache2-tr069",
+						"::1": "axess-apache2-tr069"
+					},
+					"80": {
+						"192.168.1.183": "axess-apache2-gui",
+						"127.0.0.1": "axess-apache2-gui",
+						"::1": "axess-apache2-gui"
+					},
+					"9672": {
+						"192.168.1.183": "axess-apache2-unauth",
+						"127.0.0.1": "axess-apache2-unauth",
+						"::1": "axess-apache2-unauth"
+					},
+					"8445": {
+						"192.168.1.183": "axess-apache2-nbi",
+						"127.0.0.1": "axess-apache2-nbi",
+						"::1": "axess-apache2-nbi"
+					},
+					"443": {
+						"192.168.1.183": "axess-apache2-gui",
+						"127.0.0.1": "axess-apache2-gui",
+						"::1": "axess-apache2-gui"
+					},
+					"3306": {
+						"192.168.1.183": "mysql"
+					},
+					"9675": {
+						"192.168.1.183": "axess-apache2-tr069",
+						"127.0.0.1": "axess-apache2-tr069",
+						"::1": "axess-apache2-tr069"
+					}
+				},
+				"bindmounts": [],
+				"ansible_host": "192.168.1.183",
+				"axess_root_path": "/opt/axess",
+				"default_chroot_type": "jessie"
+			},
+			"localhost": {
+				"ansible_connection": "local"
+			}
+		},
+		"_warnings": []
+	},
+	"redis-nodes": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"database": {
+		"hosts": ["db1"],
+		"children": [],
+		"vars": {}
+	},
+	"rsyslog-nodes": {
+		"hosts": ["aio", "db1"],
+		"children": [],
+		"vars": {}
+	},
+	"axess-apache2-nodes": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"nb": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"zeo-nodes": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"all-jessie-chroot-hosts": {
+		"hosts": ["debian"],
+		"children": [],
+		"vars": {}
+	},
+	"gogs-nodes": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"axess-configurator-nodes": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"mysql-nodes": {
+		"hosts": ["db1"],
+		"children": [],
+		"vars": {}
+	},
+	"all-axess-nodes": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"all-chroot-hosts": {
+		"hosts": ["debian"],
+		"children": [],
+		"vars": {}
+	},
+	"sb": {
+		"hosts": ["aio"],
+		"children": [],
+		"vars": {}
+	},
+	"all-nodes": {
+		"hosts": ["aio", "db1"],
+		"children": [],
+		"vars": {}
+	},
+	"all-hosts": {
+		"hosts": ["debian"],
+		"children": [],
+		"vars": {}
+	},
+	"mysql-master-active-nodes": {
+		"hosts": ["db1"],
+		"children": [],
+		"vars": {}
+	}
+}

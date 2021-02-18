@@ -1,0 +1,8 @@
+---
+
+- name: Provision Vagrant
+  hosts: all
+
+  tasks:
+    - name: task test2
+      file: state=directory path=~/test2

@@ -1,0 +1,13 @@
+###
+POST https://ib.adnxs.com/ut/v3/prebid
+content-type: application/json
+
+{"tags":[{"sizes":[{"width":728,"height":90},{"width":970,"height":90},{"width":970,"height":250}],"primary_size":{"width":728,"height":90},"ad_types":["banner"],"uuid":"906081678ca0a0a2","id":19647140,"allow_smaller_sizes":false,"use_pmt_rule":false,"prebid":true,"disable_psa":true,"reserve":0.02,"hb_source":1},{"sizes":[{"width":300,"height":250}],"primary_size":{"width":300,"height":250},"ad_types":["banner"],"uuid":"90733a5a69b0ec9c","id":19647141,"allow_smaller_sizes":false,"use_pmt_rule":false,"prebid":true,"disable_psa":true,"reserve":0.02,"hb_source":1},{"sizes":[{"width":300,"height":250}],"primary_size":{"width":300,"height":250},"ad_types":["banner"],"uuid":"908e9ff37a499e84","id":19647142,"allow_smaller_sizes":false,"use_pmt_rule":false,"prebid":true,"disable_psa":true,"reserve":0.02,"hb_source":1},{"sizes":[{"width":300,"height":250}],"primary_size":{"width":300,"height":250},"ad_types":["banner"],"uuid":"909c787803bbaf82","id":19647145,"allow_smaller_sizes":false,"use_pmt_rule":false,"prebid":true,"disable_psa":true,"reserve":0.02,"hb_source":1}],"user":{},"sdk":{"source":"pbjs","version":"4.7.0"},"schain":{"complete":1,"ver":"1.0","nodes":[{"hp":1,"asi":"longitudeads.com","sid":"9365"}]},"gdpr_consent":{"consent_string":"CO5ussAO5ussAAGABCENA3CgAP_AAEJAAAYgGMwEAAFAANgAwADIAHAAQAAtABpAD0APgAigBbAEgAK0AcgA_YF5AXmAxkAPoAQANAAfAEDIAIC8wkAYADIAHAAQAA-AH6AvMVABAXmOgDAAZAA4ACAAHwA_QF5kIAIAGSUAMADIAHAF5lIAoAGQAOAAgAH6AvMqABAB8AAA.YAAAAAAAAAAA","consent_required":true},"referrer_detection":{"rd_ref":"https%3A%2F%2Fwww.pokebattler.com%2Fraids%2Fdefenders%2FDARKRAI%2Flevels%2FRAID_LEVEL_5%2Fattackers%2Flevels%2F40%2Fstrategies%2FCINEMATIC_ATTACK_WHEN_POSSIBLE%2FDEFENSE_RANDOM_MC%3Fsort%3DTIME%26weatherCondition%3DNO_WEATHER%26dodgeStrategy%3DDODGE_REACTION_TIME%26aggregation%3DAVERAGE%26includeLegendary%3Dfalse%26includeShadow%3Dfalse%26includeMegas%3Dfalse%26attackerTypes%3DPOKEMON_TYPE_ALL","rd_top":true,"rd_ifs":0,"rd_stk":"https%3A%2F%2Fwww.pokebattler.com%2Fraids%2Fdefenders%2FDARKRAI%2Flevels%2FRAID_LEVEL_5%2Fattackers%2Flevels%2F40%2Fstrategies%2FCINEMATIC_ATTACK_WHEN_POSSIBLE%2FDEFENSE_RANDOM_MC%3Fsort%3DTIME%26weatherCondition%3DNO_WEATHER%26dodgeStrategy%3DDODGE_REACTION_TIME%26aggregation%3DAVERAGE%26includeLegendary%3Dfalse%26includeShadow%3Dfalse%26includeMegas%3Dfalse%26attackerTypes%3DPOKEMON_TYPE_ALL"}}
+
+###
+POST https://collect.lngtd.com/auction?rand=1604156271111
+content-type: application/json
+
+###
+GET https://gamepress.gg/pokemongo/assets/data/cpm.json
+content-type: application/json

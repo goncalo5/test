@@ -1,0 +1,138 @@
+POST http://axess:9673/live/CPEManager/DMInterfaces/rest/v1/action/test
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+{
+	"a": 1
+}
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/Params
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/Ticket/Params
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/cpe/Params
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/cpe/List
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/Ticket/List
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/WIFI/List
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/Ticket/List/show/["ticketid", "title", "cpeid"]/filters/["creation_time", ">", "2017-01-10"]/sort/[["ticketid", "asc"]]/limit/10
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+GET http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/cpe/List/show/["cpe.cpetype"]/group_by/["cpe.cpetype"]
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+###
+POST http://axess:9673/live/AXAPI/WS/v1/AX2/Portal/cpe
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+{"cpeid":"cpe_1"}
+
+###
+POST http://axess:9676/live/CPEManager/AXServiceStorage/Interfaces/rest/v1/action/activate_WIFI
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+{
+	"ServiceIdentifiers": {
+		"cpeid": "CY99748843487600",
+		"id": "1"
+	},
+	"ServiceParameters": {
+		"ssid": "test",
+		"encryption": "WPA",
+		"password": "abc"
+	},
+	"CommandOptions": {
+		
+	}
+}
+
+###
+POST http://axess:9676/live/CPEManager/AXServiceStorage/Interfaces/rest/v1/action/activate_WIFI
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+{
+	"ServiceIdentifiers": {
+		"cpeid": "E0286D7BFC20",
+		"id": "1"
+	},
+	"ServiceParameters": {
+		"ssid": "test",
+		"encryption": "WPA",
+		"password": "abc"
+	},
+	"CommandOptions": {
+		
+	}
+}
+
+###
+POST http://axess:9676/live/CPEManager/Interfaces/rest/v1/action/createDeviceConfig
+content-type: application/json
+Authorization: Basic admin:73DXX1MSU7ZEIUD3
+
+{
+	"createDeviceConfigInput": {
+		"customer_id": "CY99748843487600",
+		"device_association_id": "CY99748843487600",
+		"external_id": "CY99748843487600",
+		"product_type": "000"
+	}
+}
+
+###
+POST https://comment.gamepress.gg/api/comment/count
+content-type: text/plain
+
+{"domain":"gamepress.gg","paths":[]}
+
+###
+GET https://gamepress.gg/pokemongo/assets/data/cpm.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/pokemongo/sites/pokemongo/files/pogo-jsons/pogo_data_projection_10.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/sites/default/files/aggregatedjson/move-data-full-PoGO.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/sites/default/files/aggregatedjson/raid-boss-list-PoGO.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/sites/default/files/aggregatedjson/pokemon-data-full-en-PoGO.json
+content-type: application/json
+
+###
+GET https://www.w3schools.com/xml/tempconvert.asmx?WSDL
+content-type: application/json

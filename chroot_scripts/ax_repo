@@ -1,0 +1,116 @@
+#!/bin/bash
+
+syntax() {
+    echo "Script to administrate Axiros Mobile Repositories"
+    echo "Usage: $0 (list|add <packagename>.tar.gz|(remove|purge) <package name>)"
+    echo -e "\tlist:\tList all configured Axiros repositories."
+    echo -e "\tadd:\tAdd the given repository. Must be a tar.gz file."
+    echo -e "\tremove:\tDeconfigure the repository, but keep it."
+    echo -e "\tpurge:\tDeconfigure the repository and delete its files."
+    exit -1
+}
+
+[ $# -eq 0 ] && {
+    echo "Not enough arguments"
+    syntax
+}
+[ $# -eq 1 -a "$1" != "list" ] && {
+    echo "Not enough arguments"
+    syntax
+}
+[ $# -gt 2 ] && {
+    echo "Too many arguments"
+    syntax
+}
+
+[ "$1" = "list" ] && {
+    dirs=`cd /var/cache/ax_repos/; find . -maxdepth 1 -mindepth 1 -type d | sed s/^..//`
+    [ -z "$dirs" ] && {
+        echo "no repositories configured" 1>&2
+        exit 0
+    }
+    echo $dirs
+    exit 0
+}
+
+# Everything apart from "list" needs root privileges.
+[ $UID != 0 ] && {
+    echo "You need to be root to run this program" 1>&2
+    exit -1
+}
+
+add_repo() {
+    echo adding repo file $1
+    repo_file="$1"
+    repo_basename=`basename "$repo_file"`
+    repo_name="${repo_basename%.tar.gz}"
+    repo_dir="/var/cache/ax_repos/$repo_name"
+    file_name="/etc/apt/sources.list.d/${repo_name}.list"
+    [ -e "$repo_file" ] || {
+        echo "File $repo_file does not exist. Aborting" 1>&2
+        exit -1
+    }
+    [ "$repo_file" = "$repo_name" ] && {
+        echo "$repo_name does not end in .tar.gz. Aborting" 1>&2
+        exit -1
+    }
+    [ -d "$repo_dir" ] && {
+        echo "$repo_dir already exists. Aborting" 1>&2
+        exit -1
+    }
+    [ -e "$file_name" ] && {
+        echo "$file_name already exists. Aborting" 1>&2
+        exit -1
+    }
+    mkdir -p /var/cache/ax_repos
+    tar -xzf "$repo_file" -C /var/cache/ax_repos
+
+    echo "deb file://${repo_dir} squeeze main" > "$file_name"
+}
+remove_repo() {
+    echo removing repo $1
+    file="/etc/apt/sources.list.d/$1.list"
+    if [ -e "$file" ]; then
+        rm -f -- "$file"
+        exit $?
+    else
+        echo "file $file does not exist. Nothing was removed."
+    fi
+}
+purge_repo() {
+    echo purging repo $1
+    dir="/var/cache/ax_repos/$1"
+    if [ -d "$dir" ]; then
+        # Just make sure we are not doing something very stupid
+        if [ ! -d "$dir/dists" -o ! -d "$dir/pool" ]; then
+            echo "I'm sorry, Dave. I'm afraid I can't do that." 1>&2
+            echo "$dir does not look like a repository. I will not" 1>&2
+            echo "delete it. If you are sure, delete it manually." 1>&2
+            exit -1
+        fi
+
+        rm -rf -- "$dir"
+    else
+        echo "Directory $dir does not exist. Nothing was deleted" 1>&2
+        exit -1
+    fi
+}
+
+case $1 in
+    add)
+        add_repo "$2"
+        exit 0
+        ;;
+    remove)
+        remove_repo "$2"
+        exit 0
+        ;;
+    purge)
+        remove_repo "$2"
+        purge_repo "$2"
+        exit 0
+        ;;
+    *)
+        syntax
+esac
+

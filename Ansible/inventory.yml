@@ -1,0 +1,15 @@
+all:
+  children:
+    lab:
+      hosts:
+        192.168.1.167:
+    prodcol:
+      hosts:
+        192.168.1.177:
+    prodproc:
+      hosts:
+        192.168.1.179:
+    prod:
+      children:
+        prodcol:
+        prodproc:

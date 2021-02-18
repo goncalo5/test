@@ -1,0 +1,29 @@
+###
+POST https://comment.gamepress.gg/api/comment/count
+content-type: text/plain
+
+{"domain":"gamepress.gg","paths":[]}
+
+###
+GET https://gamepress.gg/pokemongo/assets/data/cpm.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/pokemongo/sites/pokemongo/files/pogo-jsons/pogo_data_projection_10.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/sites/default/files/aggregatedjson/move-data-full-PoGO.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/sites/default/files/aggregatedjson/raid-boss-list-PoGO.json
+content-type: application/json
+
+###
+GET https://gamepress.gg/sites/default/files/aggregatedjson/pokemon-data-full-en-PoGO.json
+content-type: application/json
+
+###
+GET https://www.w3schools.com/xml/tempconvert.asmx?WSDL
+content-type: application/json

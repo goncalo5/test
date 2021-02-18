@@ -1,0 +1,22 @@
+
+
+axess:
+  zope:
+    admin / 73DXX1MSU7ZEIUD3
+    axadmin / PDBBL7G8LG9LXKO7
+  gogs:
+    axtract-rw / 8GL4Y5ZG4IAN9IJH
+axtract:
+  zope:
+    admin / QWMNMSZS9LL2MYL5
+    axadmin / WGG1EUC84BAHNYU4
+
+flow:
+  dsl_gpvs_from_queue
+    dsl_derive
+      last_24h_cons
+        test
+          keep_recent
+      fixed_period_cons_counter
+      fixed_period_cons_gauge
+      ts_for_cpes

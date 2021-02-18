@@ -1,0 +1,26 @@
+# Define packages to install. Sourced by make_chroot.sh or by other FS build
+# tools (e.g. docker)
+# apache2-utils: "ab" (apache benchmark) command
+# atftp: a TFTP client
+# binutils: "strings" command
+# ethtool: "ethtool" command which returns info on your network adapter (layer 1/2)
+# links/lynx/w3m: Text mode web browsers
+# lsof: "LiSt Open Files", shows who has which file open (e.g. if umount fails)
+# mc: If you liked Norton Commander, you will love mc
+# mytop: see what MySQL is working on
+# netcat: TCP/UDP swiss army knife
+# ngrep: grep through network traffic
+# pbzip2: "pbzip2" command for Parallel Bzip2
+# pciutils: "lspci" command to list devices on the PCI bus
+# psmisc: The killall command
+# socat: netcat's big brother
+# strace/ltrace: "strace"/"ltrace" commands
+# time: The real "time" command, not the useless bash builtin
+# trickle: limit upstream/downstream usage of individual programs
+# util-linux: brings you "dmesg", "ionice", "taskset", "lscpu", "rev"
+# xfsprogs: manage XFS file systems
+UTILITIES="apache2-utils atftp bc bind9-host binutils bzip2 ethtool file ldap-utils less links locales lsof ltrace lynx lzma mc multitail netcat patch pbzip2 pciutils psmisc rdiff-backup rsync screen sipcalc smartmontools snmp socat ssh strace subversion sudo sysstat tcpdump tcpflow telnet time tnftp unp unzip util-linux vim w3m xfsprogs zip debsums"
+# Don't install python-soappy. It clashes with the version that comes with
+# the Axess
+PYTHON_STUFF="pylint python python-ldap python-mysqldb python-paramiko python-setuptools python-simplejson"
+

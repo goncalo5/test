@@ -1,0 +1,9 @@
+<Game>:
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "1"
+            on_press:
+                app.game.player.selected.n = 1
+        Label:
+            text: str(app.game.player.selected.n)

@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: simple test
+      become: yes
+      file:
+        path: test2
+        owner: root
+
+

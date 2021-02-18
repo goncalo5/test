@@ -1,5 +1,0 @@
-[INFO   ] Logger: Record log in /Users/goncalo/.kivy/logs/kivy_19-06-12_22.txt
-[INFO   ] Kivy: v1.10.1
-[INFO   ] Python: v3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) 
-[Clang 6.0 (clang-600.0.57)]
-[INFO   ] Image: Providers: img_tex, img_imageio, img_dds, img_sdl2, img_gif (img_pil, img_ffpyplayer ignored)

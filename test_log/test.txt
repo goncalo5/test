@@ -1,0 +1,2 @@
+2020-10-14 15:53:19,946 - simpleExample2 - CRITICAL - critical message
+2020-10-14 16:55:18,446 - simpleExample2 - CRITICAL - critical message

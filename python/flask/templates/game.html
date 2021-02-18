@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <body>
+        {{question_n}} {{question["question"]}}
+        <form action="/game" method = "POST">
+            {% for option in question["options"] %}
+                <input type="checkbox" name={{option}}>
+                <label> {{option}} </label><br>
+
+            {% endfor %}
+
+            <p><input type = "submit" value = "Submit" /></p>
+        </form>
+    </body>
+</html>
