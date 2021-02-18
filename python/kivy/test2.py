@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+from kivy.app import App
+from kivy.uix.gridlayout import GridLayout
+from kivy import properties as kp
+
+from kivy.vector import Vector
+
+O = Vector(0, 0)
+topright = Vector(1, 1)
+
+
+print(topright)
+print(O.distance(topright))
+=======
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.image import Image
@@ -102,3 +116,4 @@ class TestApp(App):
 
 if __name__ == '__main__':
     TestApp().run()
+>>>>>>> 9565eb56c0ba5b732a9a1e06c45af17a1db22c7a
